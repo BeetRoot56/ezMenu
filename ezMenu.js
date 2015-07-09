@@ -27,8 +27,6 @@ $.fn.ezMenu = function(data){
 		return false;
 	})
 	
-	var $menu = $("<ul></ul>")
-
 	function addMenu(menu){
 		var $menu = $("<ul></ul>")
 		
