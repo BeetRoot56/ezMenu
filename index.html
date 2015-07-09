@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<script src='jquery.js'></script>
+		<script src='ezMenu.js'></script>
+		<link rel='stylesheet' href='style.css' type='text/css'/>
+	</head>
+	<body>
+		<div class='contextmenu'></div>
+
+		<div id='box1' class='box'>
+			Right click me!
+		</div>
+		<div id='box2' class='box'>
+			Right click me!
+		</div>
+
+		<script>
+			
+			$("#box1").ezMenu({
+				menu:[
+					{text: "A menu item"},
+					{text: "Psst, click me!", onClick:"alert('You clicked me!')"},
+					{text: "A submenu",menu:[
+						{text: "hello 1",disabled:true},
+						{text: "hello 2",disabled:false},
+						{text: "Another sub menu",menu:[
+							{text: "hello 3"},
+							{text: "hello 4"},
+							{text: "hello 5",disabled:true},
+							{text: "And another",menu:[
+								{text: "hello 6"},
+								{text: "hello 7"},
+								{text: "hello 8",disabled:true},
+								{text: "And another...",menu:[
+									{text: "We"},
+									{text: "Can"},
+									{seperate:true},
+									{text: "Go",disabled:true},
+									{text: "Forever!"}
+								]},
+							]},
+						]},
+					]},
+					{text: "I've been disabled!",disabled:true},
+				]
+			})
+			
+			$("#box2").ezMenu({
+				menu:[
+					{text: "First item"},
+					{text: "Second item"},
+				]
+			})
+		</script>
+
+	</body>
+</html>
+
+
