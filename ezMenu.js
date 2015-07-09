@@ -10,6 +10,13 @@ $.fn.ezMenu = function(data){
 	//disable default action
 	$(this).bind("contextmenu",function(event){
 		event.preventDefault()
+		
+		
+		$(".contextmenu").remove()
+		var $contextMenu = $("<div></div>")
+		$contextMenu.addClass("contextmenu")
+		$("body").append($contextMenu)
+		
 		$(".contextmenu").css({
 			top: event.pageY,
 			left: event.pageX,
